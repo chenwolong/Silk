@@ -30,7 +30,7 @@ namespace WeChat.MP
         }
         #endregion
 
-        #region 初次获取Token接口 为做保存及时效的处理
+        #region 初次获取Token接口 未做保存及时效的处理
         public static BaseResponse<TokenModel> GetAccessToken()
         {
             BaseResponse<TokenModel> response = new BaseResponse<TokenModel>();
