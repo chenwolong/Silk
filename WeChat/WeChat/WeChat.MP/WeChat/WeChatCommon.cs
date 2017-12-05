@@ -18,6 +18,7 @@ namespace WeChat.MP
         public static string appid = ResouceLibrary.GetResourceString("appid");
         public static string appsecret = ResouceLibrary.GetResourceString("appsecret");
 
+        #region 重置Response
         public static BaseResponse<T> SetResponse<T>(T Data)
         {
             BaseResponse<T> response = new BaseResponse<T>();
@@ -27,7 +28,9 @@ namespace WeChat.MP
             response.ResultMessage = "请求成功...";
             return response;
         }
+        #endregion
 
+        #region 初次获取Token接口 为做保存及时效的处理
         public static BaseResponse<TokenModel> GetAccessToken()
         {
             BaseResponse<TokenModel> response = new BaseResponse<TokenModel>();
@@ -40,5 +43,6 @@ namespace WeChat.MP
             }
             return response;
         }
+        #endregion
     }
 }
