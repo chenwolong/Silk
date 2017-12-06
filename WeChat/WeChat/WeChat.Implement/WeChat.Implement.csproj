@@ -42,8 +42,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Home\HomeService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WeChat.Common\WeChat.Common.csproj">
+      <Project>{51a16cd4-9ed5-4f51-b8da-593332a80049}</Project>
+      <Name>WeChat.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeChat.Entity\WeChat.Entity.csproj">
+      <Project>{aff577bd-de61-4f9a-b5ba-2edd44618630}</Project>
+      <Name>WeChat.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeChat.Interface\WeChat.Interface.csproj">
+      <Project>{a0701cf4-21b9-412b-9c17-72358fda5be5}</Project>
+      <Name>WeChat.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeChat.Model\WeChat.Model.csproj">
+      <Project>{ac0e602d-18bf-4223-a631-90488a9ffd6e}</Project>
+      <Name>WeChat.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

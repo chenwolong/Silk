@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="WeChatModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="WeChatModelStoreContainer">
+          <EntitySet Name="SYS_Log" EntityType="WeChatModel.Store.SYS_Log" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_Menus" EntityType="WeChatModel.Store.SYS_Menus" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_pic" EntityType="WeChatModel.Store.SYS_pic" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_Role" EntityType="WeChatModel.Store.SYS_Role" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_UserInfo" EntityType="WeChatModel.Store.SYS_UserInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="WeChat_Menus" EntityType="WeChatModel.Store.WeChat_Menus" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="WeChat_Token" EntityType="WeChatModel.Store.WeChat_Token" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK__SYS_Log__CreateB__286302EC" Association="WeChatModel.Store.FK__SYS_Log__CreateB__286302EC">
+            <End Role="SYS_UserInfo" EntitySet="SYS_UserInfo" />
+            <End Role="SYS_Log" EntitySet="SYS_Log" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SYS_UserI__RoleI__182C9B23" Association="WeChatModel.Store.FK__SYS_UserI__RoleI__182C9B23">
+            <End Role="SYS_Role" EntitySet="SYS_Role" />
+            <End Role="SYS_UserInfo" EntitySet="SYS_UserInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__WeChat_Me__Creat__21B6055D" Association="WeChatModel.Store.FK__WeChat_Me__Creat__21B6055D">
+            <End Role="SYS_UserInfo" EntitySet="SYS_UserInfo" />
+            <End Role="WeChat_Menus" EntitySet="WeChat_Menus" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="SYS_Log">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="userNum" Type="varchar" MaxLength="50" />
+          <Property Name="userId" Type="int" />
+          <Property Name="userRight" Type="int" />
+          <Property Name="logcate" Type="nvarchar" MaxLength="20" />
+          <Property Name="logContent" Type="nvarchar" MaxLength="500" />
+          <Property Name="logIp" Type="varchar" MaxLength="50" />
+          <Property Name="logTime" Type="datetime" />
+          <Property Name="remark1" Type="nvarchar" MaxLength="500" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreateBy" Type="int" />
+        </EntityType>
+        <EntityType Name="SYS_Menus">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="menuName" Type="nvarchar" MaxLength="20" />
+          <Property Name="menuPth" Type="varchar" MaxLength="200" />
+          <Property Name="FId" Type="int" />
+          <Property Name="rightId" Type="varchar" MaxLength="10" />
+          <Property Name="AddTime" Type="datetime" />
+          <Property Name="remark1" Type="nvarchar" MaxLength="500" />
+          <Property Name="flat1" Type="int" />
+          <Property Name="isdeleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="SYS_pic">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PicNum" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="PicCate" Type="varchar" MaxLength="20" />
+          <Property Name="shopingPic" Type="varchar" MaxLength="200" />
+          <Property Name="AddTime" Type="datetime" />
+          <Property Name="remark1" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="SYS_Role">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RightName" Type="nvarchar" MaxLength="50" />
+          <Property Name="RightVle" Type="int" />
+          <Property Name="isAdd" Type="bit" />
+          <Property Name="isUpdate" Type="bit" />
+          <Property Name="isDelete" Type="bit" />
+          <Property Name="Addtime" Type="datetime" />
+          <Property Name="isdeleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="SYS_UserInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Uname" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Upwd" Type="varchar" MaxLength="100" />
+          <Property Name="RoleId" Type="int" />
+          <Property Name="EmployeeName" Type="nvarchar" MaxLength="20" />
+          <Property Name="pinyin" Type="varchar" MaxLength="20" />
+          <Property Name="idCard" Type="varchar" MaxLength="20" />
+          <Property Name="PhotoNum" Type="varchar" MaxLength="50" />
+          <Property Name="EmployeeSex" Type="nvarchar" MaxLength="1" />
+          <Property Name="EmployeePhone" Type="varchar" MaxLength="20" />
+          <Property Name="Age" Type="int" />
+          <Property Name="Worker" Type="nvarchar" MaxLength="50" />
+          <Property Name="HomeAddress" Type="nvarchar" MaxLength="200" />
+          <Property Name="IP" Type="varchar" MaxLength="50" />
+          <Property Name="AddTime" Type="varchar" MaxLength="50" />
+          <Property Name="remark1" Type="nvarchar" MaxLength="500" />
+          <Property Name="isdeleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="WeChat_Menus">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MenuName" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="MenuType" Type="varchar" MaxLength="50" />
+          <Property Name="MenuKeyValue" Type="varchar" MaxLength="1000" />
+          <Property Name="MenuFid" Type="int" />
+          <Property Name="EventType" Type="varchar" MaxLength="50" />
+          <Property Name="MenuOrder" Type="int" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreateBy" Type="int" />
+          <Property Name="isdeleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="WeChat_Token">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TokenValue" Type="varchar" MaxLength="200" />
+          <Property Name="CreateTime" Type="datetime" />
+        </EntityType>
+        <Association Name="FK__SYS_Log__CreateB__286302EC">
+          <End Role="SYS_UserInfo" Type="WeChatModel.Store.SYS_UserInfo" Multiplicity="0..1" />
+          <End Role="SYS_Log" Type="WeChatModel.Store.SYS_Log" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_UserInfo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SYS_Log">
+              <PropertyRef Name="CreateBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SYS_UserI__RoleI__182C9B23">
+          <End Role="SYS_Role" Type="WeChatModel.Store.SYS_Role" Multiplicity="0..1" />
+          <End Role="SYS_UserInfo" Type="WeChatModel.Store.SYS_UserInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_Role">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SYS_UserInfo">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__WeChat_Me__Creat__21B6055D">
+          <End Role="SYS_UserInfo" Type="WeChatModel.Store.SYS_UserInfo" Multiplicity="0..1" />
+          <End Role="WeChat_Menus" Type="WeChatModel.Store.WeChat_Menus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_UserInfo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WeChat_Menus">
+              <PropertyRef Name="CreateBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WeChatModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="WeChatEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="SYS_Log" EntityType="WeChatModel.SYS_Log" />
+          <EntitySet Name="SYS_Menus" EntityType="WeChatModel.SYS_Menus" />
+          <EntitySet Name="SYS_pic" EntityType="WeChatModel.SYS_pic" />
+          <EntitySet Name="SYS_Role" EntityType="WeChatModel.SYS_Role" />
+          <EntitySet Name="SYS_UserInfo" EntityType="WeChatModel.SYS_UserInfo" />
+          <EntitySet Name="WeChat_Menus" EntityType="WeChatModel.WeChat_Menus" />
+          <EntitySet Name="WeChat_Token" EntityType="WeChatModel.WeChat_Token" />
+          <AssociationSet Name="FK__SYS_Log__CreateB__286302EC" Association="WeChatModel.FK__SYS_Log__CreateB__286302EC">
+            <End Role="SYS_UserInfo" EntitySet="SYS_UserInfo" />
+            <End Role="SYS_Log" EntitySet="SYS_Log" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SYS_UserI__RoleI__182C9B23" Association="WeChatModel.FK__SYS_UserI__RoleI__182C9B23">
+            <End Role="SYS_Role" EntitySet="SYS_Role" />
+            <End Role="SYS_UserInfo" EntitySet="SYS_UserInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__WeChat_Me__Creat__21B6055D" Association="WeChatModel.FK__WeChat_Me__Creat__21B6055D">
+            <End Role="SYS_UserInfo" EntitySet="SYS_UserInfo" />
+            <End Role="WeChat_Menus" EntitySet="WeChat_Menus" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="SYS_Log">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="userNum" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="userId" Type="Int32" />
+          <Property Name="userRight" Type="Int32" />
+          <Property Name="logcate" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="logContent" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="logIp" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="logTime" Type="DateTime" Precision="3" />
+          <Property Name="remark1" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateBy" Type="Int32" />
+          <NavigationProperty Name="SYS_UserInfo" Relationship="WeChatModel.FK__SYS_Log__CreateB__286302EC" FromRole="SYS_Log" ToRole="SYS_UserInfo" />
+        </EntityType>
+        <EntityType Name="SYS_Menus">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="menuName" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="menuPth" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="FId" Type="Int32" />
+          <Property Name="rightId" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="AddTime" Type="DateTime" Precision="3" />
+          <Property Name="remark1" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="flat1" Type="Int32" />
+          <Property Name="isdeleted" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="SYS_pic">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="PicNum" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PicCate" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="shopingPic" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="AddTime" Type="DateTime" Precision="3" />
+          <Property Name="remark1" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SYS_Role">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="RightName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="RightVle" Type="Int32" />
+          <Property Name="isAdd" Type="Boolean" />
+          <Property Name="isUpdate" Type="Boolean" />
+          <Property Name="isDelete" Type="Boolean" />
+          <Property Name="Addtime" Type="DateTime" Precision="3" />
+          <Property Name="isdeleted" Type="Boolean" />
+          <NavigationProperty Name="SYS_UserInfo" Relationship="WeChatModel.FK__SYS_UserI__RoleI__182C9B23" FromRole="SYS_Role" ToRole="SYS_UserInfo" />
+        </EntityType>
+        <EntityType Name="SYS_UserInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Uname" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Upwd" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="RoleId" Type="Int32" />
+          <Property Name="EmployeeName" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="pinyin" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="idCard" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="PhotoNum" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="EmployeeSex" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="EmployeePhone" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Age" Type="Int32" />
+          <Property Name="Worker" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="HomeAddress" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="IP" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="AddTime" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="remark1" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="isdeleted" Type="Boolean" />
+          <NavigationProperty Name="SYS_Log" Relationship="WeChatModel.FK__SYS_Log__CreateB__286302EC" FromRole="SYS_UserInfo" ToRole="SYS_Log" />
+          <NavigationProperty Name="SYS_Role" Relationship="WeChatModel.FK__SYS_UserI__RoleI__182C9B23" FromRole="SYS_UserInfo" ToRole="SYS_Role" />
+          <NavigationProperty Name="WeChat_Menus" Relationship="WeChatModel.FK__WeChat_Me__Creat__21B6055D" FromRole="SYS_UserInfo" ToRole="WeChat_Menus" />
+        </EntityType>
+        <EntityType Name="WeChat_Menus">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MenuName" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="MenuType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="MenuKeyValue" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="MenuFid" Type="Int32" />
+          <Property Name="EventType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="MenuOrder" Type="Int32" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateBy" Type="Int32" />
+          <Property Name="isdeleted" Type="Boolean" />
+          <NavigationProperty Name="SYS_UserInfo" Relationship="WeChatModel.FK__WeChat_Me__Creat__21B6055D" FromRole="WeChat_Menus" ToRole="SYS_UserInfo" />
+        </EntityType>
+        <EntityType Name="WeChat_Token">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="TokenValue" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <Association Name="FK__SYS_Log__CreateB__286302EC">
+          <End Role="SYS_UserInfo" Type="WeChatModel.SYS_UserInfo" Multiplicity="0..1" />
+          <End Role="SYS_Log" Type="WeChatModel.SYS_Log" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_UserInfo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SYS_Log">
+              <PropertyRef Name="CreateBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SYS_UserI__RoleI__182C9B23">
+          <End Role="SYS_Role" Type="WeChatModel.SYS_Role" Multiplicity="0..1" />
+          <End Role="SYS_UserInfo" Type="WeChatModel.SYS_UserInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_Role">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SYS_UserInfo">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__WeChat_Me__Creat__21B6055D">
+          <End Role="SYS_UserInfo" Type="WeChatModel.SYS_UserInfo" Multiplicity="0..1" />
+          <End Role="WeChat_Menus" Type="WeChatModel.WeChat_Menus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_UserInfo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WeChat_Menus">
+              <PropertyRef Name="CreateBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WeChatModelStoreContainer" CdmEntityContainer="WeChatEntities">
+          <EntitySetMapping Name="SYS_Log">
+            <EntityTypeMapping TypeName="WeChatModel.SYS_Log">
+              <MappingFragment StoreEntitySet="SYS_Log">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="userNum" ColumnName="userNum" />
+                <ScalarProperty Name="userId" ColumnName="userId" />
+                <ScalarProperty Name="userRight" ColumnName="userRight" />
+                <ScalarProperty Name="logcate" ColumnName="logcate" />
+                <ScalarProperty Name="logContent" ColumnName="logContent" />
+                <ScalarProperty Name="logIp" ColumnName="logIp" />
+                <ScalarProperty Name="logTime" ColumnName="logTime" />
+                <ScalarProperty Name="remark1" ColumnName="remark1" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_Menus">
+            <EntityTypeMapping TypeName="WeChatModel.SYS_Menus">
+              <MappingFragment StoreEntitySet="SYS_Menus">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="menuName" ColumnName="menuName" />
+                <ScalarProperty Name="menuPth" ColumnName="menuPth" />
+                <ScalarProperty Name="FId" ColumnName="FId" />
+                <ScalarProperty Name="rightId" ColumnName="rightId" />
+                <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+                <ScalarProperty Name="remark1" ColumnName="remark1" />
+                <ScalarProperty Name="flat1" ColumnName="flat1" />
+                <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_pic">
+            <EntityTypeMapping TypeName="WeChatModel.SYS_pic">
+              <MappingFragment StoreEntitySet="SYS_pic">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PicNum" ColumnName="PicNum" />
+                <ScalarProperty Name="PicCate" ColumnName="PicCate" />
+                <ScalarProperty Name="shopingPic" ColumnName="shopingPic" />
+                <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+                <ScalarProperty Name="remark1" ColumnName="remark1" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_Role">
+            <EntityTypeMapping TypeName="WeChatModel.SYS_Role">
+              <MappingFragment StoreEntitySet="SYS_Role">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RightName" ColumnName="RightName" />
+                <ScalarProperty Name="RightVle" ColumnName="RightVle" />
+                <ScalarProperty Name="isAdd" ColumnName="isAdd" />
+                <ScalarProperty Name="isUpdate" ColumnName="isUpdate" />
+                <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+                <ScalarProperty Name="Addtime" ColumnName="Addtime" />
+                <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_UserInfo">
+            <EntityTypeMapping TypeName="WeChatModel.SYS_UserInfo">
+              <MappingFragment StoreEntitySet="SYS_UserInfo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Uname" ColumnName="Uname" />
+                <ScalarProperty Name="Upwd" ColumnName="Upwd" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+                <ScalarProperty Name="pinyin" ColumnName="pinyin" />
+                <ScalarProperty Name="idCard" ColumnName="idCard" />
+                <ScalarProperty Name="PhotoNum" ColumnName="PhotoNum" />
+                <ScalarProperty Name="EmployeeSex" ColumnName="EmployeeSex" />
+                <ScalarProperty Name="EmployeePhone" ColumnName="EmployeePhone" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Worker" ColumnName="Worker" />
+                <ScalarProperty Name="HomeAddress" ColumnName="HomeAddress" />
+                <ScalarProperty Name="IP" ColumnName="IP" />
+                <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+                <ScalarProperty Name="remark1" ColumnName="remark1" />
+                <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WeChat_Menus">
+            <EntityTypeMapping TypeName="WeChatModel.WeChat_Menus">
+              <MappingFragment StoreEntitySet="WeChat_Menus">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="MenuName" ColumnName="MenuName" />
+                <ScalarProperty Name="MenuType" ColumnName="MenuType" />
+                <ScalarProperty Name="MenuKeyValue" ColumnName="MenuKeyValue" />
+                <ScalarProperty Name="MenuFid" ColumnName="MenuFid" />
+                <ScalarProperty Name="EventType" ColumnName="EventType" />
+                <ScalarProperty Name="MenuOrder" ColumnName="MenuOrder" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+                <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WeChat_Token">
+            <EntityTypeMapping TypeName="WeChatModel.WeChat_Token">
+              <MappingFragment StoreEntitySet="WeChat_Token">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TokenValue" ColumnName="TokenValue" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
