@@ -1,0 +1,152 @@
+.wrap{  margin:0 auto; position:relative; text-align:left; width:640px; font-size:24px;}
+body{ background:#f5f5f5; }
+header
+{
+	height:201px;
+	width:640px;
+	background:url(../images/img5.jpg) no-repeat;
+	padding-top:37px;
+}
+header .thumb
+{
+	float:left;
+	width:130px;
+	height:130px;
+	margin:0px 25px 50px 25px;
+	border:3px solid #b7ad99;
+	border-radius:50%;
+	overflow:hidden;
+}
+header .thumb img
+{
+	width:130px;
+	height:130px;
+}
+header .desc p
+{
+	margin-bottom:10px;
+	font-size:24px;
+	color:#fff;	
+}
+header .desc p span
+{
+	margin-right:10px;
+	color:#b20000;
+}
+.ucenterBox
+{
+	background:#f5f5f5;
+	padding-bottom:200px;
+}
+.ucenterBox .head
+{
+	background:#fff;
+	border-bottom:1px solid #eaeaea;
+	padding:10px 0px;
+	margin-bottom:17px;
+}
+.ucenterBox .head ul li
+{
+	float:left;
+	width:212px;
+	background:url(../images/icon/line2.png) no-repeat right center;
+	text-align:center;
+}
+.ucenterBox .head ul li:last-child
+{
+	background:none;
+}
+.ucenterBox .head ul li h4
+{
+	font-size:28px;
+	color:#b20000;
+}
+.ucenterBox .head ul li p
+{
+	font-size:18px;
+	color:#757575;
+}
+.ucenterBox .body
+{
+	padding:0px 17px;
+}
+.ucenterBox .body ul
+{
+	margin-bottom:17px;
+}
+.ucenterBox .body ul li
+{
+	border:1px solid #eaeaea;
+	border-radius:5px;
+	background:#fff url(../images/icon/arrow.png) no-repeat 573px center;
+	padding:25px 0px;
+	margin-top:-1px;
+}
+.ucenterBox .body ul li a
+{
+	display:block;	
+}
+.ucenterBox .body ul li p
+{
+	padding-left:65px;
+	font-size:28px;
+	color:#121212;
+}
+.ucenterBox .body ul li span
+{
+	float:right;
+	display:inline-block;
+	width:85px;
+	height:50px;
+	margin-right:68px;
+	margin-top:-8px;
+	background:#b20000;
+	border-radius:25px;
+	text-align:center;
+	line-height:50px;
+	font-size:36px;
+	color:#fff;
+}
+.ucenterBox .body ul li.ico1 p
+{
+	height:34px;
+	background:url(../images/icon/icons6.png) no-repeat 18px 0px;
+}
+.ucenterBox .body ul li.ico2 p
+{
+	height:33px;
+	background:url(../images/icon/icons6.png) no-repeat 18px -33px;
+}
+.ucenterBox .body ul li.ico3 p
+{
+	height:33px;
+	background:url(../images/icon/icons6.png) no-repeat 18px -65px;
+}
+.ucenterBox .body ul li.ico4 p
+{
+	height:35px;
+	background:url(../images/icon/icons6.png) no-repeat 18px -96px;
+}
+.ucenterBox .body ul li.ico5 p
+{
+	height:36px;
+	background:url(../images/icon/icons6.png) no-repeat 18px -130px;
+}
+.ucenterBox .body ul li.ico6 p
+{
+	height:36px;
+	background:url(../images/icon/icons6.png) no-repeat 18px -164px;
+}
+.ucenterBox .body ul li.ico7 p
+{
+	height:36px;
+	background:url(../images/icon/icons6.png) no-repeat 18px -199px;
+}
+.ucenterBox .body ul li.ico8 p
+{
+	height:33px;
+	background:url(../images/icon/icons6.png) no-repeat 18px -233px;
+}
+
+
+

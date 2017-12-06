@@ -1,0 +1,216 @@
+.wrap{  margin:0 auto; position:relative; text-align:left; width:640px; font-size:24px;}
+body{ background:#f5f5f5; }
+header
+{
+	height:201px;
+	width:640px;
+	background:url(../images/img5.jpg) no-repeat;
+	padding-top:37px;
+}
+header .thumb
+{
+	float:left;
+	width:130px;
+	height:130px;
+	margin:0px 25px 50px 25px;
+	border:3px solid #b7ad99;
+	border-radius:50%;
+	overflow:hidden;
+}
+header .thumb img
+{
+	width:130px;
+	height:130px;
+}
+header .desc p
+{
+	margin-bottom:10px;
+	font-size:24px;
+	color:#fff;	
+}
+header .desc p span
+{
+	margin-right:10px;
+	color:#b20000;
+}
+header .desc p a
+{
+	display:inline-block;
+	*display:inline;
+	zoom:1;
+	width:115px;
+	height:40px;
+	background:#b20000;
+	border-radius:20px;
+	text-align:center;
+	line-height:40px;
+	font-size:24px;
+	color:#fff;
+}
+.ucenterBox
+{
+	background:#f5f5f5;
+}
+.ucenterBox .head
+{
+	background:#fff;
+	border-bottom:1px solid #eaeaea;
+	padding:10px 0px;
+	margin-bottom:17px;
+}
+.ucenterBox .head ul li
+{
+	float:left;
+	width:159px;
+	background:url(../images/icon/line2.png) no-repeat right center;
+	text-align:center;
+}
+.ucenterBox .head ul li:last-child
+{
+	background:none;
+}
+.ucenterBox .head ul li a
+{
+	display:block;	
+}
+.ucenterBox .head ul li i
+{
+	display:block; height:44px; margin-bottom:10px;
+}
+.ucenterBox .head ul li i.n1
+{
+	width:38px;
+	margin-left:62px;
+	background:url(../images/icon/icons3.png) no-repeat 0px 0px;	
+}
+.ucenterBox .head ul li i.n2
+{
+	width:36px;
+	margin-left:62px;
+	background:url(../images/icon/icons3.png) no-repeat -40px 0px;	
+}
+.ucenterBox .head ul li i.n3
+{
+	width:44px;
+	margin-left:56px;
+	background:url(../images/icon/icons3.png) no-repeat -77px 0px;	
+}
+.ucenterBox .head ul li i.n4
+{
+	width:44px;
+	margin-left:55px;
+	background:url(../images/icon/icons3.png) no-repeat -124px 0px;	
+}
+.ucenterBox .head ul li strong
+{
+	display:block;
+	font-size:22px;
+	color:#757575;	
+}
+.ucenterBox .head ul li a:active i.n1
+{
+	width:38px;
+	background:url(../images/icon/icons3.png) no-repeat 0px -46px;	
+}
+.ucenterBox .head ul li a:active i.n2
+{
+	width:36px;
+	background:url(../images/icon/icons3.png) no-repeat -40px -46px;	
+}
+.ucenterBox .head ul li a:active i.n3
+{
+	width:44px;
+	background:url(../images/icon/icons3.png) no-repeat -77px -44px;	
+}
+.ucenterBox .head ul li a:active i.n4
+{
+	width:44px;
+	background:url(../images/icon/icons3.png) no-repeat -124px -46px;	
+}
+.ucenterBox .head ul li a:active strong
+{
+	color:#b20000;	
+}
+.ucenterBox .body
+{
+	padding:0px 17px;
+}
+.ucenterBox .body ul
+{
+	margin-bottom:17px;
+
+}
+.ucenterBox .body ul li
+{	
+	overflow:hidden;
+	border:1px solid #eaeaea;
+	border-radius:5px;
+	background:#fff url(../images/icon/arrow.png) no-repeat 572px center;
+	padding:25px 0px;
+	margin-top:-1px;
+}
+.ucenterBox .body ul li a
+{
+	display:block;	
+}
+.ucenterBox .body ul li p
+{
+	padding-left:65px;
+	font-size:28px;
+	color:#121212;
+}
+.ucenterBox .body ul li.ico1 p
+{
+	height:32px;
+	background:url(../images/icon/icons4.png) no-repeat 20px 0px;
+}
+.ucenterBox .body ul li.ico2 p
+{
+	height:36px;
+	background:url(../images/icon/icons4.png) no-repeat 20px -32px;
+}
+.ucenterBox .body ul li.ico3 p
+{
+	height:33px;
+	background:url(../images/icon/icons4.png) no-repeat 20px -68px;
+}
+.ucenterBox .body ul li.ico4 p
+{
+	height:27px;
+	background:url(../images/icon/icons4.png) no-repeat 20px -101px;
+}
+.ucenterBox .body ul li.ico5 p
+{
+	height:32px;
+	background:url(../images/icon/icons4.png) no-repeat 20px -129px;
+}
+.ucenterBox .body ul li.ico6 p
+{
+	height:35px;
+	background:url(../images/icon/icons4.png) no-repeat 20px -161px;
+}
+.ucenterBox .body ul li.ico7 p
+{
+	height:33px;
+	background:url(../images/icon/icons4.png) no-repeat 20px -194px;
+}
+.ucenterBox .body ul li.ico8 p
+{
+	height:33px;
+	background:url(../images/icon/icons4.png) no-repeat 20px -228px;
+}
+.ucenterBox .body ul li.ico9 p
+{
+	height:34px;
+	background:url(../images/icon/icons4.png) no-repeat 20px -261px;
+}
+.ucenterBox .body ul li.ico10 p
+{
+	height:32px;
+	background:url(../images/icon/icons4.png) no-repeat 20px -294px;
+}
+.ucenterBox .body ul li.ico11 p
+{
+	height:32px;
+	background:url(../images/icon/icons4.png) no-repeat 20px -327px;
+}

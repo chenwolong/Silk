@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>切图</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="format-detection" content="telephone=no">
+<meta id="viewport" name="viewport" content="width=640px,minimum-scale=0.5,maximum-scale=5,user-scalable=no" />
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/category.css" />
+<link rel="stylesheet" type="text/css" href="css/sortSearch.css">
+</head>
+
+<body>
+<div class="wrap">
+	<div class="sortSearch">
+		<div class="top-bar">
+            <input type="text" class="text" placeholder="搜索相关的产品" />
+            <input type="button" class="btn-search" value="搜索" />
+        </div>
+        <div class="head">
+        	<a href="#">新品推荐</a><a href="#">店铺活动</a><a href="#">超值单品</a>
+        </div>
+        <div class="body">
+        	<a href="#">全部商品</a>
+        </div>
+        <div class="foot">
+        	<ul>
+            	<li>
+                	<div class="hd"><a href="#">真丝轻薄</a></div>
+                    <div class="bd">
+                    	<a href="#">小方巾</a><a href="#">90大方巾</a><a href="#">110大方巾</a><a href="#">雪纺长巾</a><a href="#">素绉缎长巾</a><a href="#">金丝长巾</a><a href="#">领带巾</a>
+                    </div>
+                </li>
+                <li>
+                	<div class="hd"><a href="#">真丝加厚</a></div>
+                    <div class="bd">
+                    	<a href="#">单面素绉缎长巾</a><a href="#">双面素绉缎长巾</a><a href="#">拉绒长巾</a><a href="#">复古长巾</a>
+                    </div>
+                </li>
+                <li>
+                	<div class="hd"><a href="#">真丝奢华拉绒</a></div>
+                    <div class="bd">
+                    	<a href="#">真丝拉绒长巾 </a><a href="#">真丝拉绒盘扣披肩</a><a href="#">真丝拉绒披肩</a><a href="#">双面拉绒披肩</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="head">
+        	<a href="#">儿童围巾</a><a href="#">男士围巾</a><a href="#">精纺羊毛</a><a href="#">精纺羊绒</a>
+        </div>
+    </div>
+    <!-- sortSearch end -->
+ 	
+</div>
+
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/menu.js"></script>
+<script type="text/javascript" src="js/jquery.sslide.js"></script>
+<script type="text/javascript" src="js/jquery.Slide.js"></script>
+<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+<script type="text/javascript">
+		TouchSlide({ 
+			slideCell:"#slideBox",
+			titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+			mainCell:".bd ul", 
+			effect:"leftLoop", 
+			autoPage:true,//自动分页
+			autoPlay:true //自动播放
+		});
+</script> 
+<script type="text/javascript">
+	jQuery(".proList").slide({trigger:"click"});
+</script>
+
+</body>
+</html>

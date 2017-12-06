@@ -1,0 +1,267 @@
+.wrap{  margin:0 auto; position:relative; text-align:left; width:640px; font-size:24px;}
+body{ background:#f5f5f5; }
+.buyGood
+{
+	background:#fff;
+	margin-bottom:20px;	
+}
+.buyGood .head ul li .hd
+{
+	padding:20px;
+	border-bottom:1px solid #f5f5f5;	
+}
+.buyGood .head ul li .hd .thumb
+{
+	width:142px;
+	height:126px;
+	float:left;	
+}
+.buyGood .head ul li .hd .thumb a
+{
+	display:block;	
+}
+.buyGood .head ul li .hd .thumb img
+{
+	width:142px;
+	height:126px;	
+}
+.buyGood .head ul li .hd .desc
+{
+	margin-left:160px;	
+}
+.buyGood .head ul li .hd .desc p
+{
+	margin-top:-5px;
+	margin-bottom:7px;
+	line-height:31px;
+	font-size:22px;
+	color:#222222;
+
+}
+.buyGood .head ul li .hd .desc span
+{
+	margin-bottom:7px;
+	display:block;
+	font-size:18px; 
+	color:#999999;	
+}
+.buyGood .head ul li .hd .desc .num strong
+{
+	font-size:26px;
+	color:#222222;	
+}
+.buyGood .head ul li .hd .desc .num i
+{
+	float:right;
+	font-size:22px;
+	color:#999;
+	font-style:normal;
+}
+.buyGood .body
+{
+	font-size:20px;
+	color:#222222;
+	height:68px;
+	line-height:68px;
+	padding-right:20px;
+	padding-left:20px;
+}
+.buyGood .body .score
+{
+	display:inline-block;
+	text-align:left;
+
+}
+.buyGood .body .price
+{
+	float:right;
+	display:inline-block;	
+}
+.buyGood .body .price span
+{
+	font-size:26px;
+	color:#b20000;	
+}
+.addressBox
+{
+	margin-bottom:150px;	
+}
+.addressBox p
+{
+	font-size:24px;
+	color:#757575;	
+}
+.addressBox .hd
+{
+	background:#fff url(../images/icon/dot5.png) no-repeat 16px 47px;
+	padding:15px 20px 20px 70px;
+	margin-bottom:20px;	
+}
+.addressBox .hd p
+{
+	line-height:42px;
+}
+.addressBox .bd
+{
+	background:#fff url(../images/icon/dot5.png) no-repeat 16px 22px;
+	padding:0px 0px 0px 70px;
+	margin-bottom:20px;
+	height:78px;
+}
+.addressBox .bd a
+{
+	display:block;
+}
+.addressBox .bd p
+{
+	height:78px;
+	background:url(../images/icon/arrow1.png) no-repeat 535px center;
+	line-height:78px;
+}
+.addressBox .ft
+{
+	margin-top:20px;
+	margin-bottom:60px;
+}
+.addressBox .ft ul
+{
+	background:#fff;
+}
+.addressBox .ft ul li
+{
+	height:88px;
+	background:#fff;
+	padding-right:20px;
+}
+.addressBox .ft ul li.ico1
+{
+	background:url(../images/icon/dot11.png) no-repeat 15px center;
+	border-bottom:1px solid #f5f5f5;
+	padding-left:75px;
+}
+.addressBox .ft ul li.ico2
+{
+	background:url(../images/icon/dot12.png) no-repeat 15px center;
+	padding-left:75px;
+}
+.addressBox .ft ul li p
+{
+	display:inline-block;
+	float:left;
+	font-size:24px;
+	color:#757575;
+	line-height:88px;
+}
+.addDetail
+{
+	background:#fff;
+	margin-bottom:22px;
+	padding:8px 0px;	
+}
+.addDetail ul li
+{
+	height:75px;
+	line-height:75px;
+	border-bottom:1px solid #dddddd;	
+}
+.addDetail ul li:last-child
+{
+	border:none;	
+}
+.addDetail ul li label
+{
+	display:inline-block;
+	width:132px;
+	font-size:22px;
+	color:#757575;
+	text-align:right!important;	
+}
+.addDetail ul li .text
+{
+	outline:none;
+	width:480px;
+	height:55px;
+	padding:10px 0; 
+	text-indent:5px;
+	border:none;
+	background:none;
+	font-size:22px;
+	color:#000;
+}
+.addDetail ul li select
+{
+	height:45px;
+	line-height:45px;
+	margin:15px 10px 15px 0px;
+	font-size:22px;
+	color:#000;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance:none;
+	border:1px solid #dddddd;
+	border-radius:5px;	
+}
+.addDetail ul li select.province
+{
+	width:105px;
+	padding-left:3px;
+	background:url(../imgs/arrow2.png) no-repeat 76px 16px;	
+}
+.addDetail ul li select.city
+{
+	width:105px;
+	padding-left:12px;
+	background:url(../imgs/arrow2.png) no-repeat 70px 16px;	
+}
+.addDetail ul li select.area
+{
+	width:125px;
+	padding-left:10px;
+	background:url(../imgs/arrow2.png) no-repeat 87px 16px;	
+}
+/*表单*/
+.rb
+{
+	background-image:url(../images/icon/dot2.png);
+}
+/* checkbox box */
+.rb
+{
+	width:36px;
+	height:36px;
+	float:right;
+	margin-top:22px;
+	background-position:0 0;
+	cursor:pointer;
+}
+.rb_active
+{
+	background:url(../images/icon/dot2.png) no-repeat 0px -36px;
+}
+.btn
+{
+	display:block;
+	width:600px;
+	height:68px;
+	margin:0px auto 10px;
+	border-radius:5px;
+	text-align:center;
+	line-height:68px;
+	font-size:28px;
+	color:#fff;
+}
+.btn-orag
+{
+	background:#f27501;	
+}
+.btn-gray
+{
+	background:#959595;
+	margin-bottom:290px;	
+}
+.btn-red
+{
+	margin:0px auto;
+	background:#b20000;
+}
+

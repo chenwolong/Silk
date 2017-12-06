@@ -1,0 +1,68 @@
+.wrap{  margin:0 auto; position:relative; text-align:left; width:640px; font-size:24px;}
+body{ background:#f5f5f5; }
+header
+{
+	height:75px;
+	line-height:75px;
+	padding-left:15px;
+	font-size:28px;
+	color:#121212;	
+}
+.myData
+{
+	margin-bottom:365px;
+}
+.myData ul
+{
+	background:#fff;
+	margin-bottom:60px;
+}
+.myData ul li
+{
+	height:77px;
+	padding-left:20px;
+	border-bottom:1px solid #dddddd;
+	line-height:77px;
+}
+.myData ul li:last-child
+{
+	border:none;
+}
+.myData ul li i
+{
+	display:inline-block;
+	width:16px;
+	height:15px;
+}
+.myData ul li label
+{
+	display:inline-block;
+	width:125px;
+	text-align:right;
+	font-size:24px;
+	color:#757575;
+}
+.myData ul li .text,.myData ul li .password
+{
+	outline:none;
+	height:57px;
+	padding:10px 0;
+	text-indent:10px;
+	border:none;
+	background:none;
+	font-size:22px;
+	color:#121212;
+}
+.btn-red
+{
+	display:block;
+	width:600px;
+	margin:0px auto;
+	height:68px;
+	background:#f27501;
+	border-radius:5px;
+	text-align:center;
+	line-height:68px;
+	font-size:28px;
+	color:#fff;
+}

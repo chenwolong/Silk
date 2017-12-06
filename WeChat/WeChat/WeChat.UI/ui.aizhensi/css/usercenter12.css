@@ -1,0 +1,61 @@
+.wrap{  margin:0 auto; position:relative; text-align:left; width:640px; font-size:24px;}
+body{ background:#f5f5f5; }
+header
+{
+	height:75px;
+	line-height:75px;
+	padding-left:20px;
+	border-bottom:1px solid #dddddd;
+	font-size:28px;
+	color:#121212;	
+}
+.refundBox
+{
+	margin:0px 20px 380px 20px;	
+}
+.refundBox .hd
+{
+	margin-bottom:30px;	
+}
+.refundBox .hd label
+{
+	display:block;
+	height:65px;
+	line-height:65px;
+	font-size:24px;
+	color:#757575;	
+}
+.refundBox .hd .text
+{
+	outline:none;
+	width:580px;
+	height:47px;
+	text-align:center;
+	padding:10px;
+	border:1px solid #eaeaea;
+	background:#fff;
+	font-size:28px;
+}
+.refundBox .hd textarea
+{
+	width:580px;
+	min-height:47px;
+	height:auto;
+	height:47px;
+	padding:10px;
+	border:1px solid #eaeaea;
+} 
+.btn-red
+{
+	display:block;
+	width:600px;
+	height:68px;
+	margin:0px auto;
+	border-radius:5px;
+	background:#f27501;
+	text-align:center;
+	line-height:68px;
+	font-size:28px;
+	color:#fff;
+}
+

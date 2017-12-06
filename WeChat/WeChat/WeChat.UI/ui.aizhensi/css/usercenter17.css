@@ -1,0 +1,50 @@
+
+.scspList 
+{
+	padding-bottom:100px;
+}
+.scspList .head ul li .hd {
+	padding:20px;
+	margin-bottom:20px;
+	background:#fff;	
+}
+.scspList .head ul li .hd .thumb
+{
+	width:142px;
+	height:126px;
+	float:left;	
+}
+.scspList .head ul li .hd .thumb a
+{
+	display:block;	
+}
+.scspList .head ul li .hd .thumb img
+{
+	width:142px;
+	height:126px;	
+}
+.scspList .head ul li .hd .desc
+{
+	margin-left:160px;	
+}
+.scspList .head ul li .hd .desc p
+{
+	margin-top:-5px;
+	margin-bottom:7px;
+	line-height:31px;
+	font-size:22px;
+	color:#222222;
+
+}
+.scspList .head ul li .hd .desc span
+{
+	margin-bottom:7px;
+	display:block;
+	font-size:18px; 
+	color:#999999;	
+}
+.scspList .head ul li .hd .desc .num
+{
+	font-size:26px;
+	color:#222222;	
+}

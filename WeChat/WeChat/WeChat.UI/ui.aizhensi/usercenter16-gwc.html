@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=640px, initial-scale=0.5, user-scalable=no, maximum-scale=5, minimum-scale=0.5" />
+	<link rel="stylesheet" type="text/css" href="css/common.css" />
+	<link rel="stylesheet" type="text/css" href="css/category.css" />
+	<link rel="stylesheet" type="text/css" href="css/usercenter13.css" />
+	<title></title>
+</head>
+<body>
+<div class="wrap">
+    <header>
+     <input type="button" class="button">
+     我的购物车   
+    </header>
+    
+    <div class="buyCar">
+        <ul>
+        	<li class="clear-both">
+            	<div class="cbt checked" name="check"  type="checkbox" val="3"></div>
+                <div class="proInfo">
+                    <div class="thumb"><img src="images/img4.jpg"/></div>
+                    <div class="desc clear-both">
+                        <p>女士超长雪纺丝巾春秋夏季薄款防晒围巾遮阳沙滩巾纱 枚红色</p>
+                        <small>颜色分类：枚红色</small>
+                        <span>￥180.5</span>
+                        <div class="ctrl-div">
+                            <div class="jian">-</div>
+                            <div class="num">1</div>
+                            <div class="jia">+</div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="clear-both">
+            	<div class="cbt checked" name="check"  type="checkbox" val="3"></div>
+                <div class="proInfo">
+                    <div class="thumb"><img src="images/img4.jpg"/></div>
+                    <div class="desc clear-both">
+                        <p>女士超长雪纺丝巾春秋夏季薄款防晒围巾遮阳沙滩巾纱 枚红色</p>
+                        <small>颜色分类：枚红色</small>
+                        <span>￥180.5</span>
+                        <div class="ctrl-div">
+                            <div class="jian">-</div>
+                            <div class="num">1</div>
+                            <div class="jia">+</div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="clear-both">
+            	<div class="cbt checked" name="check"  type="checkbox" val="3"></div>
+                <div class="proInfo">
+                    <div class="thumb"><img src="images/img4.jpg"/></div>
+                    <div class="desc clear-both">
+                        <p>女士超长雪纺丝巾春秋夏季薄款防晒围巾遮阳沙滩巾纱 枚红色</p>
+                        <small>颜色分类：枚红色</small>
+                        <span>￥180.5</span>
+                        <div class="ctrl-div">
+                            <div class="jian">-</div>
+                            <div class="num">1</div>
+                            <div class="jia">+</div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+  <div class="footer">
+    <div class="cbt all checked" name="checkAll" type="checkbox"></div><strong>全选</strong>
+	<div class="addNum">
+    	<p>合计：￥1809.00元</p>
+        <span>(共1件，不含运费)</span>
+    </div>
+    <a href="#" class="toBuy">去结算</a>
+  </div>
+  
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/menu.js"></script>
+<script type="text/javascript" src="js/jquery.inputbox.js"></script>
+<script type="text/javascript">
+$(function(){
+
+	$('.cbt').inputbox();
+	
+	//$('[name="rbt"], [name="rbt2"]').inputbox();
+	
+	});
+</script>
+<script type="text/javascript">
+/*模拟加减控件*/
+	$('.ctrl-div .jia').click(function(){ 
+		$(this).parent().find('.num').html(parseInt($(this).parent().find('.num').html())+1);							   
+	})
+	$('.ctrl-div .jian').click(function(){ 
+		var n = parseInt($(this).parent().find('.num').html())-1;
+		if(n<0){
+			n = 0;	
+		}
+		$(this).parent().find('.num').html(n);							   
+	})
+	
+</script>
+
+
+
+</div>
+</body>
+</html>

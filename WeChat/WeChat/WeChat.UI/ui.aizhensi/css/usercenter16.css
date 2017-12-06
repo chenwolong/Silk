@@ -1,0 +1,78 @@
+.wrap{  margin:0 auto; position:relative; text-align:left; width:640px; font-size:24px;}
+body{ background:#f5f5f5; }
+.payWay .hd
+{
+	height:89px;
+	line-height:86px;
+	border-bottom:1px solid #dddddd;
+	margin-bottom:23px;
+	background:#fff;
+}
+.payWay .hd ul li
+{
+	width:319px;
+	height:89px;
+	float:left;
+	background:url(../imgs/line1.png) no-repeat right center;
+}
+.payWay .hd ul li:last-child
+{
+	background:none;
+}
+.payWay .hd ul li p
+{
+	width:240px;
+	margin:0px auto;
+	text-align:center;
+	font-size:28px;
+	color:#121212;
+}
+.payWay .hd ul li.on p
+{
+	border-bottom:3px solid #006ead;
+}
+.payWay .bd
+{
+	padding:0px 20px 185px 20px;
+}
+.payWay .bd p label
+{
+	display:block;
+	height:55px;
+	line-height:63px;
+	padding-left:4px;
+	font-size:24px;
+	color:#757575;
+}
+.payWay .bd p .text
+{
+	outline:none;
+	width:598px;
+	height:46px;
+	padding:10px 0px;
+	text-indent:10px;
+	background:#fff;
+	border:1px solid #eaeaea;
+	border-radius:2px;
+	font-size:24px;
+}
+.payWay .bd span
+{
+	display:block;
+	text-align:center;
+	font-size:22px;
+	color:#f27501;
+}
+.btn-red
+{
+	display:block;
+	width:600px;
+	margin:50px auto 15px;
+	height:68px;
+	background:#f27501;
+	border-radius:5px;
+	text-align:center;
+	line-height:68px;
+	font-size:28px;
+	color:#fff;
+}

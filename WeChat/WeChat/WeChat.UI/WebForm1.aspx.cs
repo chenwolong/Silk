@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using WeChat.Common;
 using WeChat.Model;
 using WeChat.MP;
 
@@ -13,8 +14,7 @@ namespace WeChat.UI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            BaseResponse<TokenModel> response = new BaseResponse<TokenModel>();
-            response = WeChatCommon.GetAccessToken();
+            LogHelper.WriteLog("测试日志工作");
         }
     }
 }

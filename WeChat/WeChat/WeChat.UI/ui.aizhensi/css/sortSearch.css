@@ -1,0 +1,14 @@
+
+.sortSearch{ background:#f5f5f5; padding-bottom:146px;}
+.sortSearch .top-bar{ background:#fff; height:58px; padding:23px 0px 18px 19px; margin-bottom:20px;}
+.sortSearch .top-bar .text{ vertical-align:top; outline:none; width:460px; height:28px; margin-right:10px; padding:15px 0px; padding-left:80px; line-height:28px; font-size:22px; background:#f5f5f5 url(../images/icon/ico1.png) no-repeat 32px center; border-radius:40px; border:none;}
+.sortSearch .top-bar .btn-search{ vertical-align:top; outline:none; width:65px; height:58px; text-align:left; background:none; border:none; cursor:pointer; font-size:24px; color:#222222;}
+.sortSearch .head{ background:#fff; height:68px; padding-left:18px; line-height:68px; margin-bottom:20px;}
+.sortSearch .head a{ display:inline-block; height:68px; margin-right:60px; font-size:24px; color:#727272;}
+.sortSearch .head a:last-child{ margin:0px;}
+.sortSearch .body{ height:68px; padding-left:18px; line-height:68px; background:#fff url(../images/icon/arrow1.png) no-repeat 603px center; margin-bottom:20px;}
+.sortSearch .body a{ display:block; height:68px; font-size:24px; color:#222222;}
+.sortSearch .foot ul li .hd{ background:#fff; height:68px; padding-left:18px; line-height:68px;}
+.sortSearch .foot ul li .hd a{ display:block; font-size:24px; color:#727272;}
+.sortSearch .foot ul li .bd{ padding:18px 0px 3px 40px;}
+.sortSearch .foot ul li .bd a{ display:inline-block; margin-right:70px; margin-bottom:17px; font-size:20px; color:#727272;}

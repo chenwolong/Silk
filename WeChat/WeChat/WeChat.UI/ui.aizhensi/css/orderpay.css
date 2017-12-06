@@ -1,0 +1,279 @@
+﻿.wrap{  margin:0 auto; position:relative; text-align:left; width:640px; font-size:24px;}
+body{ background:#f5f5f5; }
+header
+{
+	height:75px;
+	line-height:75px;
+	padding-left:20px;
+	font-size:28px;
+	color:#121212;	
+}
+.buyGood
+{
+	background:#fff;
+	margin-bottom:20px;	
+}
+.buyGood .hd
+{
+	padding:20px;
+	border-bottom:1px solid #f5f5f5;	
+}
+.buyGood .hd .thumb
+{
+	width:140px;
+	height:140px;
+	float:left;
+}
+.buyGood .hd .thumb a
+{
+	display:block;	
+}
+.buyGood .hd .thumb img
+{
+	width:140px;
+	height:140px;	
+}
+.buyGood .hd .desc
+{
+	margin-left:160px;	
+}
+.buyGood .hd .desc p
+{
+	margin-bottom:10px;
+	padding-bottom:10px;
+	line-height:35px;
+	font-size:24px;
+	color:#757575;
+	border-bottom:1px solid #f5f5f5;
+}
+.buyGood .hd .desc span
+{
+	font-size:30px;
+	font-weight:bold;
+	color:#db0005;
+	display:block;
+	text-align:right;	
+}
+.buyGood .bd
+{
+	padding:5px 20px 10px;	
+}
+.buyGood .bd p
+{
+	font-size:22px;
+	color:#757575;	
+}
+.buyGood .bd .score
+{
+	float:left;
+	line-height:80px;	
+}
+.buyGood .bd .price
+{
+	float:right;	
+}
+.buyGood .bd .price small
+{
+	display:block;
+	text-align:right;
+	font-size:18px;
+	color:#757575;	
+}
+.buyGood .bd .price p span
+{
+	font-size:22px;
+	color:#db0005;	
+}
+.addressIfo
+{
+	margin-bottom:120px;	
+}
+.addressIfo .hd
+{
+	background:#fff url(../imgs/dot1.png) no-repeat 16px 47px;
+	border-bottom:1px solid #f5f5f5;
+	padding:15px 20px 20px 70px;	
+}
+.addressIfo .hd p
+{
+	line-height:42px;
+	color:#757575;
+}
+.addressIfo .bd p
+{
+	padding:20px 0px;
+	margin-bottom:345px;
+	text-align:right;
+}
+.addressIfo .bd p a
+{
+	display:inline-block;
+	width:125px;
+	height:68px;
+	margin-right:20px;
+	border-radius:3px;
+	background:#f27501;
+	text-align:center;
+	line-height:68px;
+	color:#fff;	
+}
+.addressIfo .ft
+{
+	margin-top:20px;
+	margin-bottom:60px;
+}
+.addressIfo .ft ul
+{
+	background:#fff;
+}
+.addressIfo .ft ul li
+{
+	height:88px;
+	background:#fff;
+	padding-right:20px;
+}
+.addressIfo .ft ul li.ico1
+{
+	
+	border-bottom:1px solid #f5f5f5;
+	padding-left:75px;
+}
+.addressIfo .ft ul li.ico2
+{
+	background:url(../imgs/dot12.png) no-repeat 15px center;
+	padding-left:75px;
+}
+.addressIfo .ft ul li p.price
+{
+	display:inline-block;
+	float:right;
+	background:url(../imgs/dot11.png) no-repeat 15px center;
+	padding-left:65px;
+	font-size:24px;
+	color:#757575;
+	line-height:88px;
+}
+.addressIfo .ft ul li p.price2
+{
+	display:inline-block;
+	float:right;
+	background:url(../imgs/dot12.png) no-repeat 15px center;
+	padding-left:65px;
+	font-size:24px;
+	color:#757575;
+	line-height:88px;
+}
+.addDetail
+{
+	background:#fff;
+	margin-bottom:22px;
+	padding:8px 0px;	
+}
+.addDetail ul li
+{
+	height:75px;
+	line-height:75px;
+	border-bottom:1px solid #dddddd;	
+}
+p{ line-height:75px; color:#808080; font-size:22px; text-align:right; }
+.addDetail ul li:last-child
+{
+	border:none;	
+}
+.addDetail ul li label
+{
+	display:inline-block;
+	width:132px;
+	font-size:22px;
+	color:#757575;
+	text-align:right!important;	
+}
+.addDetail ul li .text
+{
+	outline:none;
+	width:480px;
+	height:55px;
+	padding:10px 0; 
+	text-indent:5px;
+	border:none;
+	background:none;
+	font-size:22px;
+	color:#000;
+}
+.addDetail ul li select
+{
+	height:45px;
+	line-height:45px;
+	margin:15px 10px 15px 0px;
+	font-size:22px;
+	color:#000;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance:none;
+	border:1px solid #dddddd;
+	border-radius:5px;	
+}
+.addDetail ul li select.province
+{
+	width:105px;
+	padding-left:3px;
+	background:url(../imgs/arrow2.png) no-repeat 76px 16px;	
+}
+.addDetail ul li select.city
+{
+	width:105px;
+	padding-left:12px;
+	background:url(../imgs/arrow2.png) no-repeat 70px 16px;	
+}
+.addDetail ul li select.area
+{
+	width:125px;
+	padding-left:10px;
+	background:url(../imgs/arrow2.png) no-repeat 87px 16px;	
+}
+/*表单*/
+.rb
+{
+	background-image:url(../imgs/dot8.png);
+}
+/* checkbox box */
+.rb
+{
+	width:36px;
+	height:36px;
+	float:right;
+	margin-top:22px;
+	background-position:0 0;
+	cursor:pointer;
+}
+.rb_active
+{
+	background:url(../imgs/dot9.png);
+}
+.btn
+{
+	display:block;
+	width:600px;
+	height:68px;
+	margin:0px auto 10px;
+	border-radius:5px;
+	text-align:center;
+	line-height:68px;
+	font-size:28px;
+	color:#fff;
+}
+.btn-orag
+{
+	background:#f27501;	
+}
+.btn-gray
+{
+	background:#959595;
+	margin-bottom:290px;	
+}
+.btn-red
+{
+	margin:0px auto;
+	background:#f27501;
+}
+

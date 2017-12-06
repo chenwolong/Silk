@@ -1,0 +1,62 @@
+.wrap{  margin:0 auto; position:relative; text-align:left; width:640px; font-size:24px;}
+body{ background:#f5f5f5; }
+header .monNum
+{
+	width:213px;
+	height:55px;
+	margin:20px auto;
+	background:#006ead;
+	border-radius:25px;
+	text-align:center;
+	line-height:55px;
+	font-size:22px;
+	color:#fff;	
+}
+.ucenterBox-pro
+{
+	margin-bottom:750px;	
+}
+.ucenterBox-pro ul
+{
+	background:#fff;	
+}
+.ucenterBox-pro ul li
+{
+	width:212px;
+	float:left;
+	background:url(../imgs/line1.png) no-repeat right center;
+	text-align:center;
+}
+.ucenterBox-pro ul li:last-child
+{
+	background:none;	
+}
+.ucenterBox-pro ul li a
+{
+	display:block;
+	padding-top:10px;	
+}
+.ucenterBox-pro ul li a:hover,.ucenterBox-pro ul li a.cur
+{
+	background:#f27501;	
+}
+.ucenterBox-pro ul li a:hover h4,.ucenterBox-pro ul li a.cur h4
+{
+	color:#fff;
+}
+.ucenterBox-pro ul li a:hover p,.ucenterBox-pro ul li a.cur p
+{
+	color:#fff;
+}
+.ucenterBox-pro ul li h4
+{
+	font-size:28px;
+	font-weight:normal;
+	color:#f27501;		
+}
+.ucenterBox-pro ul li p
+{
+	font-size:22px;
+	color:#757575;
+	padding-bottom:12px;		
+}

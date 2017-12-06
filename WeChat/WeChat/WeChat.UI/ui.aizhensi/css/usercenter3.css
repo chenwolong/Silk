@@ -1,0 +1,75 @@
+.wrap{  margin:0 auto; position:relative; text-align:left; width:640px; font-size:24px;}
+body{ background:#f5f5f5; }
+header
+{
+	height:75px;
+	line-height:75px;
+	padding-left:15px;
+	font-size:28px;
+	color:#121212;	
+}
+.addressBox
+{
+	margin-bottom:225px;	
+}
+.addressBox ul
+{
+	margin-bottom:20px;	
+}
+.addressBox ul li
+{
+	margin-bottom:20px;
+	background:#fff;
+}
+.addressBox ul li p
+{
+	font-size:24px;
+	color:#757575;	
+}
+.addressBox ul li .hd
+{
+	background:url(../images/icon/dot5.png) no-repeat 16px center;
+	border-bottom:1px solid #f5f5f5;
+	padding:15px 20px 20px 70px;	
+}
+.addressBox ul li .hd p
+{
+	line-height:42px;
+}
+.addressBox ul li .bd p
+{
+	padding:20px 20px 20px 68px;
+	text-align:right;
+}
+.addressBox ul li .bd p span{ float:left;}
+.addressBox ul li .bd p a
+{
+	display:inline-block;
+	width:103px;
+	height:46px;
+	margin-right:20px;
+	border:1px solid #dddddd;
+	border-radius:2px;
+	text-align:center;
+	line-height:46px;
+	color:#757575;	
+}
+.addressBox ul li .bd p a:active,.addressBox ul li .bd p a.cur
+{
+	background:#b20000;
+	border:1px solid #b20000;
+	color:#fff;	
+}
+.btn-red
+{
+	display:block;
+	width:600px;
+	height:68px;
+	margin:0px auto 30px;
+	background:#b20000;
+	border-radius:5px;
+	text-align:center;
+	line-height:68px;
+	font-size:28px;
+	color:#fff;
+}
