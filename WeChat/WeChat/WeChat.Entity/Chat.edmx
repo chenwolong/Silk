@@ -52,9 +52,9 @@
           <Property Name="FId" Type="int" />
           <Property Name="rightId" Type="varchar" MaxLength="10" />
           <Property Name="AddTime" Type="datetime" />
-          <Property Name="remark1" Type="nvarchar" MaxLength="500" />
-          <Property Name="flat1" Type="int" />
+          <Property Name="MenusSort" Type="int" />
           <Property Name="isdeleted" Type="bit" />
+          <Property Name="remark1" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="SYS_pic">
           <Key>
@@ -214,9 +214,9 @@
           <Property Name="FId" Type="Int32" />
           <Property Name="rightId" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
           <Property Name="AddTime" Type="DateTime" Precision="3" />
-          <Property Name="remark1" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-          <Property Name="flat1" Type="Int32" />
+          <Property Name="MenusSort" Type="Int32" />
           <Property Name="isdeleted" Type="Boolean" />
+          <Property Name="remark1" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
         </EntityType>
         <EntityType Name="SYS_pic">
           <Key>
@@ -360,9 +360,9 @@
                 <ScalarProperty Name="FId" ColumnName="FId" />
                 <ScalarProperty Name="rightId" ColumnName="rightId" />
                 <ScalarProperty Name="AddTime" ColumnName="AddTime" />
-                <ScalarProperty Name="remark1" ColumnName="remark1" />
-                <ScalarProperty Name="flat1" ColumnName="flat1" />
+                <ScalarProperty Name="MenusSort" ColumnName="MenusSort" />
                 <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+                <ScalarProperty Name="remark1" ColumnName="remark1" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

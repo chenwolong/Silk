@@ -20,8 +20,8 @@ namespace WeChat.Entity
         public Nullable<int> FId { get; set; }
         public string rightId { get; set; }
         public Nullable<System.DateTime> AddTime { get; set; }
-        public string remark1 { get; set; }
-        public Nullable<int> flat1 { get; set; }
+        public Nullable<int> MenusSort { get; set; }
         public Nullable<bool> isdeleted { get; set; }
+        public string remark1 { get; set; }
     }
 }

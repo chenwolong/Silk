@@ -14,6 +14,19 @@ namespace WeChat.Interface
         /// </summary>
         /// <param name="userId">id</param>
         /// <returns></returns>
-        UserInfoModel GetUserInfo(int userId);
+        BaseResponse<UserInfoModel> GetUserInfo(int userId);
+        /// <summary>
+        /// 登录
+        /// </summary>
+        /// <param name="UserName"></param>
+        /// <param name="UserPwd"></param>
+        /// <returns></returns>
+        BaseResponse<UserInfoModel> UserLogin(string UserName, string UserPwd);
+        /// <summary>
+        /// 获取菜单栏
+        /// </summary>
+        /// <param name="UserRight"></param>
+        /// <returns></returns>
+        string GetMenus(int? UserRight);
     }
 }

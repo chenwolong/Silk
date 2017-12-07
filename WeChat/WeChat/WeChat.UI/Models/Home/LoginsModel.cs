@@ -31,35 +31,38 @@ namespace WeChat.UI.Models
             lock (LOCK)
             {
                 //数据库操作代码
-                //usermodel = Implement.Login(UserName, UserPwd);
-                //int UserId = 0;
-                //if (usermodel != null)
-                //{
-                //    UserId = usermodel.ID;
-                //}
-                int UserId = 1;
-                if (UserId != 0)
+                BaseResponse<UserInfoModel> response= Implement.UserLogin(UserName, UserPwd);
+                usermodel = response.Data;
+                if (usermodel != null)
                 {
-                    if (remember)
+                    int UserId = 0;
+                    UserId = usermodel.Id;
+                    if (UserId != 0)
                     {
-                        CommonMethod.setCookie("HX_userName", UserName, 7);
-                        CommonMethod.setCookie("HX_userPwd", UserPwd, 7);
+                        if (remember)
+                        {
+                            CommonMethod.setCookie("HX_userName", UserName, 7);
+                            CommonMethod.setCookie("HX_userPwd", UserPwd, 7);
+                        }
+                        FormsAuthenticationTicket authTicket = new FormsAuthenticationTicket(
+                               1,
+                               UserId + "",
+                               DateTime.Now,
+                               DateTime.Now.AddMinutes(30),
+                               false,
+                               "admins",
+                               "/"
+                               );
+                        //.ASPXAUTH
+                        string encryptedTicket = FormsAuthentication.Encrypt(authTicket);
+                        System.Web.HttpCookie authCookie = new System.Web.HttpCookie(FormsAuthentication.FormsCookieName, encryptedTicket);
+                        System.Web.HttpContext.Current.Response.Cookies.Add(authCookie);
+                        return "Success";
                     }
-                    FormsAuthenticationTicket authTicket = new FormsAuthenticationTicket(
-                           1,
-                           UserName + "_" + UserId,
-                           DateTime.Now,
-                           DateTime.Now.AddMinutes(30),
-                           false,
-                           "admins",
-                           "/"
-                           );
-                    //.ASPXAUTH
-                    string encryptedTicket = FormsAuthentication.Encrypt(authTicket);
-                    System.Web.HttpCookie authCookie = new System.Web.HttpCookie(FormsAuthentication.FormsCookieName, encryptedTicket);
-                    System.Web.HttpContext.Current.Response.Cookies.Add(authCookie);
-                    CommonMethod.setCookieForMIn("docUidForRegist", UserId.ToString(), 45);
-                    return "Success";
+                    else
+                    {
+                        return "账户密码不存在";
+                    }
                 }
                 else
                 {

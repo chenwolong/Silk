@@ -19,7 +19,7 @@ namespace WeChat.MP
         public static string appsecret = ResouceLibrary.GetResourceString("appsecret");
 
         #region 重置Response
-        public static BaseResponse<T> SetResponse<T>(T Data)
+        private static BaseResponse<T> SetResponse<T>(T Data)
         {
             BaseResponse<T> response = new BaseResponse<T>();
             response.Data = Data;

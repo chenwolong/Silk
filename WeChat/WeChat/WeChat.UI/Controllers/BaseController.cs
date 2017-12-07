@@ -169,39 +169,43 @@ namespace WeChat.UI.Controllers
             }
             if (authTicket != null && filterContext.HttpContext.User.Identity.IsAuthenticated)
             {
-                //string UserName = authTicket.Name;
-                //mol = GetUserInfo(UserName);
-                //if (mol != null)
-                //{
-                //    Uright = mol.Uright;
-                //    RoleModel model = new RoleModel();
-                //    model = Implement.GetRole(mol.Uright);
-                //    if (model != null)
-                //    {
-                //        mol.isAdd = model.isAdd;
-                //        mol.isDelete = model.isDelete;
-                //        mol.isUpdate = model.isUpdate;
-                //    }
-                //    ViewBag.MenusList = Implement.GetMenus(Uright, mol.ID);
-                //    ViewBag.UserName = mol.Uname;
-                //    //把toke用户数据放到 HttpContext.Current.User 里
-                //    ClientUserData clientUserData = new ClientUserData()
-                //    {
-                //        RoleId = model.ID,
-                //        RightVle = model.RightVle,
-                //        RightName = model.RightName,
-                //        CompanyId = mol.CompanyId,
-                //        UserId = mol.ID,
-                //        UserName = mol.Uname,
-                //        EmpId = mol.empId,
-                //        EmpName = mol.EmployeeName
-                //    };
-                    //if (System.Web.HttpContext.Current != null)
-                    //{
-                    //    System.Web.HttpContext.Current.User = new UserPrincipal(clientUserData);
-                //    //}
-                //}
-                //base.OnActionExecuting(filterContext);
+                string UserId = authTicket.Name;
+                if (!string.IsNullOrEmpty(UserId))
+                {
+                    var response = Implement.GetUserInfo(Convert.ToInt32(UserId));
+                    mol = response.Data;
+                    if (mol != null)
+                    {
+                        Uright = mol.Role.RightVle;
+                        ViewBag.MenusList = Implement.GetMenus(Uright);
+                        ViewBag.UserName = mol.Uname;
+                        //把toke用户数据放到 HttpContext.Current.User 里
+                        ClientUserData clientUserData = new ClientUserData()
+                        {
+                            UserId = mol.Id,
+                            Uname = mol.Uname,
+                            RoleId = mol.RoleId,
+                            pinyin = mol.pinyin,
+                            idCard = mol.idCard,
+                            PhotoNum = mol.PhotoNum,
+                            EmployeeSex = mol.EmployeeSex,
+                            EmployeePhone = mol.EmployeePhone,
+                            Age = mol.Age,
+                            Worker = mol.Worker,
+                            HomeAddress = mol.HomeAddress,
+                            RightVle = mol.Role.RightVle,
+                            RightName = mol.Role.RightName,
+                            isAdd = mol.Role.isAdd,
+                            isUpdate = mol.Role.isUpdate,
+                            isDelete = mol.Role.isDelete,
+                        };
+                        if (System.Web.HttpContext.Current != null)
+                        {
+                            System.Web.HttpContext.Current.User = new UserPrincipal(clientUserData);
+                        }
+                    }
+                }
+                base.OnActionExecuting(filterContext);
             }
             else
             {
