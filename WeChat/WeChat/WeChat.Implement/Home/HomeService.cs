@@ -42,6 +42,17 @@ namespace WeChat.Implement
                 if (M != null)
                 {
                     Model = Mapper.DynamicMap<UserInfoModel>(M);
+                    SYS_RoleModel RoleModel = new SYS_RoleModel()
+                    {
+                        Id = M.SYS_Role.Id,
+                        RightName = M.SYS_Role.RightName,
+                        RightVle = M.SYS_Role.RightVle,
+                        isAdd = M.SYS_Role.isAdd,
+                        isUpdate = M.SYS_Role.isUpdate,
+                        isDelete = M.SYS_Role.isDelete,
+                        Addtime = M.SYS_Role.Addtime
+                    };
+                    Model.Role = RoleModel;
                     response = SetResponse<UserInfoModel>(Model);
                 }
                 return response;
@@ -107,7 +118,7 @@ namespace WeChat.Implement
                     var Flist = MenusList.Where(A => A.FId == 0).ToList();
                     foreach (var Fitem in Flist)
                     {
-                        var Clist = Flist.Where(A => A.FId == Fitem.Id).ToList();
+                        var Clist = MenusList.Where(A => A.FId == Fitem.Id).ToList();
                         if (Clist.Count > 0)
                         {
                             sb.Append(@" <li><a href='#subPages" + Flist.IndexOf(Fitem) + "' data-toggle='collapse' class='collapsed'><i class='lnr lnr-file-empty'></i><span>" + Fitem.menuName + "</span> <i class='icon-submenu lnr lnr-chevron-left'></i></a><div id='subPages" + Flist.IndexOf(Fitem) + "' class='collapse '><ul class='nav'>");

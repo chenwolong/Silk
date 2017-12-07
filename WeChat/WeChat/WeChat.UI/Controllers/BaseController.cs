@@ -204,13 +204,16 @@ namespace WeChat.UI.Controllers
                             System.Web.HttpContext.Current.User = new UserPrincipal(clientUserData);
                         }
                     }
+                    base.OnActionExecuting(filterContext);
                 }
-                base.OnActionExecuting(filterContext);
+                else
+                {
+                    Response.Redirect("/Home/Logins");
+                }
             }
             else
             {
-                Content("<script >location.href='/Home/Logins';</script >", "text/html");
-                //filterContext.HttpContext.Response.Redirect("/Home/Logins");
+                Response.Redirect("/Home/Logins");
             }
         }
         #endregion
