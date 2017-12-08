@@ -21,29 +21,6 @@ namespace WeChat.UI.Controllers
         public int? Uright = -999;//权限值
         //
         #region commonCS
-        #region 退出登录
-        /// <summary>
-        /// 退出登录
-        /// </summary>
-        public void ClearLogin()
-        {
-            FormsAuthenticationTicket authTicket = new FormsAuthenticationTicket(
-                   1,
-                   "",
-                   DateTime.Now,
-                   DateTime.Now.AddMinutes(30),
-                   false,
-                   "",
-                   "/"
-                   );
-            //.ASPXAUTH
-            string encryptedTicket = FormsAuthentication.Encrypt(authTicket);
-            System.Web.HttpCookie authCookie = new System.Web.HttpCookie(FormsAuthentication.FormsCookieName, encryptedTicket);
-            System.Web.HttpContext.Current.Response.Cookies.Add(authCookie);
-
-        }
-        #endregion
-
         #region 读取错误信息
         /// <summary>
         /// 读取错误信息
@@ -206,14 +183,6 @@ namespace WeChat.UI.Controllers
                     }
                     base.OnActionExecuting(filterContext);
                 }
-                else
-                {
-                    Response.Redirect("/Home/Logins");
-                }
-            }
-            else
-            {
-                Response.Redirect("/Home/Logins");
             }
         }
         #endregion

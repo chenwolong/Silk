@@ -50,7 +50,7 @@ namespace WeChat.UI.Models
                                DateTime.Now,
                                DateTime.Now.AddMinutes(30),
                                false,
-                               "admins",
+                               usermodel.Role.RightVle.ToString(),
                                "/"
                                );
                         //.ASPXAUTH

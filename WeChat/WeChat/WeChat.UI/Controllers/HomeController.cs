@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using WeChat.Common;
 using WeChat.UI.Models;
 
@@ -12,7 +13,8 @@ namespace WeChat.UI.Controllers
     {
         public ActionResult Logins()
         {
-            ClearLogin();
+            FormsAuthentication.SignOut();
+            //ClearLogin();
             string HX_userName = CommonMethod.getCookie("HX_userName");
             string HX_userPwd = CommonMethod.getCookie("HX_userPwd");
             ViewBag.HX_userName = HX_userName;

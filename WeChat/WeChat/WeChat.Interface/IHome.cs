@@ -28,5 +28,12 @@ namespace WeChat.Interface
         /// <param name="UserRight"></param>
         /// <returns></returns>
         string GetMenus(int? UserRight);
+        /// <summary>
+        /// 验证菜单访问权限
+        /// </summary>
+        /// <param name="MenuPth"></param>
+        /// <param name="CurrentUserRole"></param>
+        /// <returns></returns>
+        bool CheckRole(string MenuPth, string CurrentUserRole);
     }
 }

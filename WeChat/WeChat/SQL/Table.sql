@@ -93,7 +93,7 @@ menuPth varchar(200),--栏目路径URL
 FId int,--父Id
 rightId varchar(10),--访问权限
 AddTime datetime,--添加时间
-remark1 nvarchar(500),--以下为备注字段
 MenusSort int default(0),--排序
-isdeleted bit default(0)
+isdeleted bit default(0),
+remark1 varchar(00),--图标?
 )

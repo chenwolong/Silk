@@ -121,7 +121,7 @@ namespace WeChat.Implement
                         var Clist = MenusList.Where(A => A.FId == Fitem.Id).ToList();
                         if (Clist.Count > 0)
                         {
-                            sb.Append(@" <li><a href='#subPages" + Flist.IndexOf(Fitem) + "' data-toggle='collapse' class='collapsed'><i class='lnr lnr-file-empty'></i><span>" + Fitem.menuName + "</span> <i class='icon-submenu lnr lnr-chevron-left'></i></a><div id='subPages" + Flist.IndexOf(Fitem) + "' class='collapse '><ul class='nav'>");
+                            sb.Append(@" <li><a href='#subPages" + Flist.IndexOf(Fitem) + "' data-toggle='collapse' class='collapsed'><i class='"+Fitem.remark1+"'></i><span>" + Fitem.menuName + "</span> <i class='icon-submenu lnr lnr-chevron-left'></i></a><div id='subPages" + Flist.IndexOf(Fitem) + "' class='collapse '><ul class='nav'>");
                             foreach (var Citem in Clist)
                             {
                                 sb.Append("<li><a href='"+Citem.menuPth+"' class=''>"+Citem.menuName+"</a></li>");
@@ -137,6 +137,25 @@ namespace WeChat.Implement
                 return sb.ToString();
             };
 
+        }
+        #endregion
+
+        #region 权限验证
+        public bool CheckRole(string MenuPth,string CurrentUserRole)
+        {
+            using (WeChatEntities context = new WeChatEntities())
+            {
+                var bol=false;
+                var M = context.SYS_Menus.Where(A=>A.menuPth==MenuPth).FirstOrDefault();
+                if (M != null)
+                {
+                    if (M.rightId.Contains(CurrentUserRole))
+                    {
+                        bol = true; 
+                    }
+                }
+                return bol;
+            }
         }
         #endregion
     }

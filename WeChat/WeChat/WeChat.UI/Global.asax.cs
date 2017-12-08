@@ -1,14 +1,19 @@
-﻿using System;
+﻿
+using WeChat.Common;
+using WeChat.Entity;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity.Core.Mapping;
+using System.Data.Entity.Core.Metadata.Edm;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Security.Principal;
 using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
-using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Security;
-using WeChat.Common;
+using System.Web.Optimization;
 
 namespace WeChat.UI
 {
@@ -20,7 +25,14 @@ namespace WeChat.UI
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-
+            #region EF预热
+            using (var dbcontext = new WeChatEntities())
+            {
+                var objectContext = ((IObjectContextAdapter)dbcontext).ObjectContext;
+                var mappingCollection = (StorageMappingItemCollection)objectContext.MetadataWorkspace.GetItemCollection(DataSpace.CSSpace);
+                mappingCollection.GenerateViews(new List<EdmSchemaError>());
+            }
+            #endregion
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

@@ -133,6 +133,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Auth\MvcActionAuth.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MangerController.cs" />
@@ -141,6 +142,7 @@
     </Compile>
     <Compile Include="Models\Home\LoginsModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WeChatEntities.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\master\css\bootstrap.css" />
@@ -306,6 +308,7 @@
     <Content Include="Views\Home\Logins.cshtml" />
     <Content Include="Views\Shared\_Master.cshtml" />
     <Content Include="Views\Manger\Index.cshtml" />
+    <Content Include="Views\Manger\sys_UserManger.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -317,6 +320,10 @@
     <ProjectReference Include="..\WeChat.Common\WeChat.Common.csproj">
       <Project>{51a16cd4-9ed5-4f51-b8da-593332a80049}</Project>
       <Name>WeChat.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeChat.Entity\WeChat.Entity.csproj">
+      <Project>{aff577bd-de61-4f9a-b5ba-2edd44618630}</Project>
+      <Name>WeChat.Entity</Name>
     </ProjectReference>
     <ProjectReference Include="..\WeChat.Implement\WeChat.Implement.csproj">
       <Project>{2c4f19ba-fb89-45b4-968f-6f1c01ea4eec}</Project>
@@ -349,9 +356,9 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
-          <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>8002</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:22513/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
