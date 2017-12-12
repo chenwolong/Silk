@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -44,5 +45,26 @@ namespace WeChat.MP
             return response;
         }
         #endregion
+
+        #region 微信创建菜单
+        /// <summary>
+        /// 获取拥有子菜单的Button
+        /// </summary>
+        /// <param name="WeChatButtons"></param>
+        /// <returns></returns>
+        public string GetJsonForWeChatButton(List<WeChatMenus> WeChatButtons)
+        {
+            return JsonConvert.SerializeObject(WeChatButtons).Replace(",\"url\":null", "").Replace("\"key\":null,", "");
+        }
+        /// <summary>
+        /// 没有子菜单的Button
+        /// </summary>
+        /// <param name="ClickButtons"></param>
+        /// <returns></returns>
+        public string GetJsonForWeChatCilckButton(List<WeChatButtons> SubButton)
+        {
+            return JsonConvert.SerializeObject(SubButton).Replace(",\"url\":null", "").Replace("\"key\":null,", "");
+        }
+        #endregion 
     }
 }

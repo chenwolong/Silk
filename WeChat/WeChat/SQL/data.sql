@@ -41,10 +41,6 @@ values('待配置','',0,'1,','2015-03-05 11:38:55.147',1,1,'lnr lnr-file-empty')
 
 
 insert into [dbo].[SYS_Menus](menuName,menuPth,FID,rightID,AddTime,MenusSort,isdeleted) 
-values('公众号配置','',0,'1,','2015-03-05 11:38:55.147',1,0)
-
-
-insert into [dbo].[SYS_Menus](menuName,menuPth,FID,rightID,AddTime,MenusSort,isdeleted) 
 values('管理员列表','/Manger/sys_UserManger',1,'1,3,2,4,','2015-03-05 11:38:55.147',1,0)
 
 insert into [dbo].[SYS_Menus](menuName,menuPth,FID,rightID,AddTime,MenusSort,isdeleted) 
@@ -52,4 +48,4 @@ values('角色管理','/Manger/sys_RoleManger',1,'1,3,2,4,','2015-03-05 11:38:55.147
 
 
 insert into [dbo].[SYS_Menus](menuName,menuPth,FID,rightID,AddTime,MenusSort,isdeleted) 
-values('公众号菜单','/Manger/WeChat_Menus',2,'1,3,2,4,','2015-03-05 11:38:55.147',1,0)
+values('公众号菜单','/WeChat/WeChat_Menus',2,'1,3,2,4,','2015-03-05 11:38:55.147',1,0)

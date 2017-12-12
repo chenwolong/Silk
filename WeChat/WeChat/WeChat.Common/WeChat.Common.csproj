@@ -90,6 +90,7 @@
     <Compile Include="Enums\EnumHelper.cs" />
     <Compile Include="HttpDownLoad\HttpDownLoad.cs" />
     <Compile Include="HttpWebClients\GlobalClientConfig.cs" />
+    <Compile Include="HttpWebClients\ClientRequest.cs" />
     <Compile Include="HttpWebClients\JsonHelper.cs" />
     <Compile Include="HttpWebClients\NetworkHelper.cs" />
     <Compile Include="HttpWebClients\RestServiceProxy.cs" />

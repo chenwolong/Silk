@@ -13,6 +13,13 @@ namespace WeChat.MP
 {
     public class WeChatUri
     {
+        /// <summary>
+        /// 获取Token
+        /// </summary>
         public static string GetAccessTokenUri = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={0}&secret={1}";
+        /// <summary>
+        /// 创建微信菜单
+        /// </summary>
+        public static string CreateWeChatMenus = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token={0}";
     }
 }

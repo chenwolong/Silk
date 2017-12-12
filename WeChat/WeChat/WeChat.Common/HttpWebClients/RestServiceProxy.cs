@@ -281,6 +281,39 @@ namespace WeChat.Common
             }
         }
 
+        /// <summary>
+        /// 陈卧龙 2017-12-11
+        /// </summary>
+        /// <param name="data"></param>
+        /// <param name="endpoint"></param>
+        /// <returns></returns>
+        public static string Post(string data, string endpoint)
+        {
+            using (var httpClient = NewHttpClient())
+            {
+                httpClient.DefaultRequestHeaders.Add("mac", GlobalClientConfig.MacAddress);
+
+                var requestMessage = data;
+                HttpContent contentPost = new StringContent(requestMessage, Encoding.UTF8, "application/json");
+                var response = httpClient.PostAsync(endpoint, contentPost).Result;
+                if (response.StatusCode != HttpStatusCode.OK)
+                {
+                    if (response.StatusCode == HttpStatusCode.Unauthorized)
+                    {
+                        throw new UnauthorizedAccessException();
+                    }
+                    else
+                    {
+                        throw new Exception("Invoke Server Service Error");
+                    }
+                }
+
+                string result = response.Content.ReadAsStringAsync().Result;
+                return result;
+
+            }
+        }
+
         public static TRetrun Post<TRetrun, TPost>(TPost data, string endpoint)
         {
             using (var httpClient = NewHttpClient())

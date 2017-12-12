@@ -115,10 +115,11 @@ namespace WeChat.Implement
                 List<MenusModel> MenusList = Mapper.DynamicMap<List<MenusModel>>(data);
                 if (MenusList.Count > 0)
                 {
-                    var Flist = MenusList.Where(A => A.FId == 0).ToList();
+                    string right = UserRight.ToString();
+                    var Flist = MenusList.Where(A => A.FId == 0&&A.rightId.Contains(UserRight.ToString())).ToList();
                     foreach (var Fitem in Flist)
                     {
-                        var Clist = MenusList.Where(A => A.FId == Fitem.Id).ToList();
+                        var Clist = MenusList.Where(A => A.FId == Fitem.Id && A.rightId.Contains(UserRight.ToString())).ToList();
                         if (Clist.Count > 0)
                         {
                             sb.Append(@" <li><a href='#subPages" + Flist.IndexOf(Fitem) + "' data-toggle='collapse' class='collapsed'><i class='"+Fitem.remark1+"'></i><span>" + Fitem.menuName + "</span> <i class='icon-submenu lnr lnr-chevron-left'></i></a><div id='subPages" + Flist.IndexOf(Fitem) + "' class='collapse '><ul class='nav'>");
@@ -130,7 +131,7 @@ namespace WeChat.Implement
                         }
                         else
                         {
-                            sb.Append("<li><a href='" + Fitem.menuPth + "' class=''><i class='lnr lnr-code'></i><span>" + Fitem.menuName + "</span></a></li>");
+                            sb.Append("<li><a href='" + Fitem.menuPth + "' class='' ><i class='lnr lnr-code'></i><span>" + Fitem.menuName + "</span></a></li>");
                         }
                     }
                 }
