@@ -1,51 +1,51 @@
-insert into SYS_Role values('Ö°Ô±',0,1,1,1,'2012-9-9',0)
+insert into SYS_Role values(N'èŒå‘˜',0,1,1,1,'2012-9-9',0)
 
-insert into SYS_UserInfo values('18911695087','18911695087',1,'³ÂÎÔÁú','CWL','411481199808088888','','','',22,'','','','','',0)
+insert into SYS_UserInfo values('18911695087','18911695087',1,N'é™ˆå§é¾™','CWL','411481199808088888','','','',22,'','','','','',0)
 
-
-insert into [dbo].[SYS_Menus](menuName,menuPth,FID,rightID,AddTime,MenusSort,isdeleted,remark1) 
-values('ÏµÍ³¹ÜÀí','',0,'1,','2015-03-05 11:38:55.147',1,0,'lnr lnr-file-empty')
 
 insert into [dbo].[SYS_Menus](menuName,menuPth,FID,rightID,AddTime,MenusSort,isdeleted,remark1) 
-values('¹«ÖÚºÅÅäÖÃ','',0,'1,','2015-03-05 11:38:55.147',1,0,'lnr lnr-file-empty')
+values(N'ç³»ç»Ÿç®¡ç†','',0,'1,','2015-03-05 11:38:55.147',1,0,'lnr lnr-file-empty')
 
 insert into [dbo].[SYS_Menus](menuName,menuPth,FID,rightID,AddTime,MenusSort,isdeleted,remark1) 
-values('´ıÅäÖÃ','',0,'1,','2015-03-05 11:38:55.147',1,1,'lnr lnr-file-empty')
+values(N'å…¬ä¼—å·é…ç½®','',0,'1,','2015-03-05 11:38:55.147',1,0,'lnr lnr-file-empty')
 
 insert into [dbo].[SYS_Menus](menuName,menuPth,FID,rightID,AddTime,MenusSort,isdeleted,remark1) 
-values('´ıÅäÖÃ','',0,'1,','2015-03-05 11:38:55.147',1,1,'lnr lnr-file-empty')
+values(N'å¾…é…ç½®','',0,'1,','2015-03-05 11:38:55.147',1,1,'lnr lnr-file-empty')
 
 insert into [dbo].[SYS_Menus](menuName,menuPth,FID,rightID,AddTime,MenusSort,isdeleted,remark1) 
-values('´ıÅäÖÃ','',0,'1,','2015-03-05 11:38:55.147',1,1,'lnr lnr-file-empty')
+values(N'å¾…é…ç½®','',0,'1,','2015-03-05 11:38:55.147',1,1,'lnr lnr-file-empty')
 
 insert into [dbo].[SYS_Menus](menuName,menuPth,FID,rightID,AddTime,MenusSort,isdeleted,remark1) 
-values('´ıÅäÖÃ','',0,'1,','2015-03-05 11:38:55.147',1,1,'lnr lnr-file-empty')
+values(N'å¾…é…ç½®','',0,'1,','2015-03-05 11:38:55.147',1,1,'lnr lnr-file-empty')
 
 insert into [dbo].[SYS_Menus](menuName,menuPth,FID,rightID,AddTime,MenusSort,isdeleted,remark1) 
-values('´ıÅäÖÃ','',0,'1,','2015-03-05 11:38:55.147',1,1,'lnr lnr-file-empty')
+values(N'å¾…é…ç½®','',0,'1,','2015-03-05 11:38:55.147',1,1,'lnr lnr-file-empty')
 
 insert into [dbo].[SYS_Menus](menuName,menuPth,FID,rightID,AddTime,MenusSort,isdeleted,remark1) 
-values('´ıÅäÖÃ','',0,'1,','2015-03-05 11:38:55.147',1,1,'lnr lnr-file-empty')
+values(N'å¾…é…ç½®','',0,'1,','2015-03-05 11:38:55.147',1,1,'lnr lnr-file-empty')
 
 insert into [dbo].[SYS_Menus](menuName,menuPth,FID,rightID,AddTime,MenusSort,isdeleted,remark1) 
-values('´ıÅäÖÃ','',0,'1,','2015-03-05 11:38:55.147',1,1,'lnr lnr-file-empty')
+values(N'å¾…é…ç½®','',0,'1,','2015-03-05 11:38:55.147',1,1,'lnr lnr-file-empty')
 
 insert into [dbo].[SYS_Menus](menuName,menuPth,FID,rightID,AddTime,MenusSort,isdeleted,remark1) 
-values('´ıÅäÖÃ','',0,'1,','2015-03-05 11:38:55.147',1,1,'lnr lnr-file-empty')
+values(N'å¾…é…ç½®','',0,'1,','2015-03-05 11:38:55.147',1,1,'lnr lnr-file-empty')
 
 insert into [dbo].[SYS_Menus](menuName,menuPth,FID,rightID,AddTime,MenusSort,isdeleted,remark1) 
-values('´ıÅäÖÃ','',0,'1,','2015-03-05 11:38:55.147',1,1,'lnr lnr-file-empty')
+values(N'å¾…é…ç½®','',0,'1,','2015-03-05 11:38:55.147',1,1,'lnr lnr-file-empty')
 
 insert into [dbo].[SYS_Menus](menuName,menuPth,FID,rightID,AddTime,MenusSort,isdeleted,remark1) 
-values('´ıÅäÖÃ','',0,'1,','2015-03-05 11:38:55.147',1,1,'lnr lnr-file-empty')
+values(N'å¾…é…ç½®','',0,'1,','2015-03-05 11:38:55.147',1,1,'lnr lnr-file-empty')
+
+insert into [dbo].[SYS_Menus](menuName,menuPth,FID,rightID,AddTime,MenusSort,isdeleted,remark1) 
+values(N'å¾…é…ç½®','',0,'1,','2015-03-05 11:38:55.147',1,1,'lnr lnr-file-empty')
 
 
 insert into [dbo].[SYS_Menus](menuName,menuPth,FID,rightID,AddTime,MenusSort,isdeleted) 
-values('¹ÜÀíÔ±ÁĞ±í','/Manger/sys_UserManger',1,'1,3,2,4,','2015-03-05 11:38:55.147',1,0)
+values(N'ç®¡ç†å‘˜åˆ—è¡¨','/Manger/sys_UserManger',1,'1,3,2,4,','2015-03-05 11:38:55.147',1,0)
 
 insert into [dbo].[SYS_Menus](menuName,menuPth,FID,rightID,AddTime,MenusSort,isdeleted) 
-values('½ÇÉ«¹ÜÀí','/Manger/sys_RoleManger',1,'1,3,2,4,','2015-03-05 11:38:55.147',1,0)
+values(N'è§’è‰²ç®¡ç†','/Manger/sys_RoleManger',1,'1,3,2,4,','2015-03-05 11:38:55.147',1,0)
 
 
 insert into [dbo].[SYS_Menus](menuName,menuPth,FID,rightID,AddTime,MenusSort,isdeleted) 
-values('¹«ÖÚºÅ²Ëµ¥','/WeChat/WeChat_Menus',2,'1,3,2,4,','2015-03-05 11:38:55.147',1,0)
+values(N'å…¬ä¼—å·èœå•','/WeChat/WeChat_Menus',2,'1,3,2,4,','2015-03-05 11:38:55.147',1,0)
